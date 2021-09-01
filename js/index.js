@@ -37,3 +37,8 @@ function zoom(event) {
 }
 var x = document.querySelector('.content-destination');
 x.addEventListener('wheel', zoom);
+
+// doubleclick and it turns red
+let my = document.querySelector('.content-pick h4');
+my.addEventListener('dblclick', (event) => 
+event.target.style.color = 'red');
