@@ -1,6 +1,6 @@
 // Your code goes here
 const btn = document.querySelector('.logo-heading');
-console.log('I love you');
+console.log('xxx');
 function random(number) {
   return Math.floor(Math.random() * (number+1));
 }
@@ -24,6 +24,16 @@ const tag = pic.nextElementSibling;
     tag.addEventListener('mouseover', (event) => 
     event.target.style.color = 'red');
 
-const pick = document.querySelector('. content-pick p');
+const pick = document.querySelector('.footer');
     console.log(pick);
     window.addEventListener('load', (event) => event.target.style.textAlign = 'center');
+
+// zoom div in and out with scroll wheel
+function zoom(event) {
+  event.preventDefault();
+  let scale = 1;
+  scale += event.deltaY * -0.01;
+  x.style.transform = `scale(${scale})`;
+}
+var x = document.querySelector('.content-destination');
+x.addEventListener('wheel', zoom);
